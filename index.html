@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acompañamiento estratégico en gestión del talento humano, liderazgo, bienestar y desarrollo organizacional para empresas públicas y privadas.">
+  <meta name="theme-color" content="#FFF8F0">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Tatiana Delgado | Gestión del Talento Humano">
+  <meta property="og:description" content="Acompañamiento estratégico en talento humano para organizaciones públicas y privadas.">
+  <title>Tatiana Delgado | Gestión del Talento Humano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FFF8F0;
+      --chocolate: #4A2417;
+      --primary: #8B563C;
+      --sand: #D9B69C;
+      --white: #fff;
+      --muted: #72594d;
+      --shadow: 0 12px 32px rgba(74, 36, 23, 0.09);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--chocolate);
+      font-family: "Poppins", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      background: rgba(255, 248, 240, 0.96);
+      border-bottom: 1px solid rgba(139, 86, 60, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--chocolate);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.3;
+    }
+
+    .brand-copy strong {
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-copy span {
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--primary);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--white);
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 180ms ease, transform 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--sand);
+      color: var(--chocolate);
+      transform: translateY(-2px);
+    }
+
+    .header-cta {
+      min-height: 44px;
+      padding: 9px 19px;
+      font-size: 0.84rem;
+    }
+
+    /* Sección principal: propuesta de valor y llamado a la acción. */
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 570px;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(42, 25, 18, 0.83) 0%, rgba(42, 25, 18, 0.64) 48%, rgba(42, 25, 18, 0.1) 100%),
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=85") center 43% / cover no-repeat;
+      color: var(--white);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 680px;
+      padding-block: 92px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--sand);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 640px;
+      margin: 0;
+      font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      margin: 22px 0 30px;
+      color: rgba(255, 255, 255, 0.91);
+      font-size: 1.05rem;
+    }
+
+    .hero .button:hover,
+    .hero .button:focus-visible {
+      background: var(--sand);
+    }
+
+    .section {
+      padding-block: 88px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--primary);
+    }
+
+    .section-heading h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Catálogo de soluciones para fortalecer equipos y organizaciones. */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .catalog-card,
+    .service-card {
+      overflow: hidden;
+      border: 1px solid rgba(139, 86, 60, 0.08);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .catalog-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+
+    .card-copy {
+      padding: 22px 23px 25px;
+    }
+
+    .card-copy h3,
+    .service-card h3 {
+      margin: 0 0 9px;
+      font-size: 1.08rem;
+      line-height: 1.4;
+    }
+
+    .card-copy p,
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    /* Servicios profesionales con enfoque humano y estratégico. */
+    .services-section {
+      background: #f4e9dd;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      padding: 30px;
+    }
+
+    .service-icon {
+      display: grid;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 20px;
+      place-items: center;
+      border-radius: 16px;
+      background: #f4e9dd;
+      color: var(--primary);
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    /* Contacto: formulario para iniciar una conversación profesional. */
+    .contact-section {
+      padding-block: 88px;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 54px;
+      padding: clamp(28px, 5vw, 58px);
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-copy .eyebrow {
+      color: var(--primary);
+    }
+
+    .contact-copy h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-copy p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-details {
+      display: grid;
+      justify-items: start;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .location-link {
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-field label {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid #e6d5c8;
+      border-radius: 10px;
+      background: #fffdfa;
+      color: var(--chocolate);
+      font: inherit;
+      font-size: 0.92rem;
+    }
+
+    .form-field input {
+      min-height: 48px;
+      padding: 10px 13px;
+    }
+
+    .form-field textarea {
+      min-height: 130px;
+      padding: 12px 13px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--primary);
+      outline: 3px solid rgba(139, 86, 60, 0.14);
+    }
+
+    .contact-form .button {
+      justify-self: start;
+      margin-top: 3px;
+    }
+
+    .form-note {
+      margin: -8px 0 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    /* Pie de página con derechos reservados y enlaces sociales. */
+    .site-footer {
+      padding-block: 28px;
+      background: var(--chocolate);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.82rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-links a {
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus-visible {
+      color: var(--sand);
+    }
+
+    @media (max-width: 1024px) {
+      .catalog-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .header-inner {
+        gap: 16px;
+      }
+
+      .main-nav ul {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 145px;
+      }
+
+      .container {
+        width: min(100% - 32px, 480px);
+      }
+
+      .header-inner {
+        min-height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding-block: 12px;
+      }
+
+      .brand {
+        margin-right: auto;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-copy strong {
+        font-size: 0.88rem;
+      }
+
+      .brand-copy span {
+        font-size: 0.6rem;
+      }
+
+      .header-cta {
+        min-height: 40px;
+        padding: 8px 13px;
+        font-size: 0.75rem;
+      }
+
+      .main-nav {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .main-nav ul {
+        justify-content: space-between;
+        gap: 18px;
+        padding: 2px 0;
+      }
+
+      .main-nav a {
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        min-height: 520px;
+        background-position: 57% center;
+      }
+
+      .hero-content {
+        padding-block: 76px;
+      }
+
+      .hero-copy {
+        font-size: 0.96rem;
+      }
+
+      .section,
+      .contact-section {
+        padding-block: 64px;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .catalog-grid,
+      .services-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-grid,
+      .services-grid {
+        gap: 18px;
+      }
+
+      .contact-panel {
+        gap: 28px;
+        padding: 26px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado con identidad de marca y navegación principal. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Tatiana Delgado, inicio">
+        <img src="./IMAGENES/logo%20td.png" alt="Logotipo de Tatiana Delgado">
+        <span class="brand-copy">
+          <strong>Tatiana Delgado</strong>
+          <span>Gestión del talento humano</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="#contacto">Hablemos</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección hero con presentación, especialidad y llamado a la acción. -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Talento humano con visión estratégica</p>
+          <h1 id="hero-title">El crecimiento de una organización empieza con su gente.</h1>
+          <p class="hero-copy">Soy contadora pública con experiencia en el sector financiero y me especializo en gerencia del talento humano. Acompaño a empresas privadas a desarrollar equipos comprometidos, capaces y preparados para crecer.
+          <a class="button" href="#servicios">Conoce cómo puedo ayudarte</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo con seis soluciones para el desarrollo de las personas. -->
+    <section class="section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Soluciones para cada etapa</p>
+          <h2 id="catalog-title">Un equipo sólido transforma organizaciones</h2>
+          <p>Iniciativas prácticas para fortalecer el talento, el liderazgo y la cultura de tu empresa o entidad.</p>
+        </div>
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <img src="./IMAGENES/1%20Gestion%20del%20Talento%20Humano.png" alt="Equipo colaborando en una estrategia de talento humano" loading="lazy">
+            <div class="card-copy">
+              <h3>Gestión del talento humano</h3>
+              <p>Estrategias para atraer, desarrollar y fortalecer el talento, alineadas con los objetivos del negocio.</p>
+            </div>
+          </article>
+          <article class="catalog-card">
+            <img src="./IMAGENES/2%20Desarrollo%20de%20Liderazgo.png" alt="Líder orientando a su equipo de trabajo" loading="lazy">
+            <div class="card-copy">
+              <h3>Desarrollo de liderazgo</h3>
+              <p>Formación y acompañamiento para potenciar líderes que inspiran, conectan y generan impacto positivo.</p>
+            </div>
+          </article>
+          <article class="catalog-card">
+            <img src="./IMAGENES/3%20Transformacion%20Organizacional.png" alt="Idea que representa la transformación organizacional" loading="lazy">
+            <div class="card-copy">
+              <h3>Transformación organizacional</h3>
+              <p>Acompañamiento en procesos de cambio, cultura y estructura para construir organizaciones ágiles y sostenibles.</p>
+            </div>
+          </article>
+          <article class="catalog-card">
+            <img src="./IMAGENES/4%20Bienestar%20Laboral.png" alt="Profesional en un momento de bienestar y equilibrio laboral" loading="lazy">
+            <div class="card-copy">
+              <h3>Bienestar laboral</h3>
+              <p>Acciones que promueven entornos de trabajo saludables, equilibrados y conectados con un propósito.</p>
+            </div>
+          </article>
+          <article class="catalog-card">
+            <img src="./IMAGENES/5%20Evaluacion%20del%20Desempeno.png" alt="Análisis de indicadores para evaluar el desempeño" loading="lazy">
+            <div class="card-copy">
+              <h3>Evaluación del desempeño</h3>
+              <p>Herramientas para medir, reconocer y desarrollar el potencial de las personas y sus equipos.</p>
+            </div>
+          </article>
+          <article class="catalog-card">
+            <img src="./IMAGENES/6%20Inteligencia%20Artificial%20RRHH.png" alt="Colaboración entre personas y tecnología aplicada a recursos humanos" loading="lazy">
+            <div class="card-copy">
+              <h3>Inteligencia artificial en RR. HH.</h3>
+              <p>Uso responsable de herramientas digitales para optimizar procesos y potenciar decisiones centradas en las personas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios profesionales organizados en tres áreas de acompañamiento. -->
+    <section class="section services-section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Acompañamiento a tu medida</p>
+          <h2 id="services-title">Servicios para impulsar el mejor talento</h2>
+          <p>Un enfoque cercano y estratégico que integra la gestión humana con las metas institucionales y financieras.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">01</span>
+            <h3>Consultoría organizacional</h3>
+            <p>Diagnóstico y asesoría para diseñar procesos de talento humano coherentes con la estrategia de empresas privadas .</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">02</span>
+            <h3>Formación y desarrollo</h3>
+            <p>Talleres y programas para fortalecer liderazgo, competencias, comunicación y colaboración en todos los niveles.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">03</span>
+            <h3>Bienestar y cultura</h3>
+            <p>Planes que promueven bienestar, compromiso y una cultura organizacional saludable, respetuosa y sostenible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de contacto para solicitar información o una asesoría. -->
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <p class="eyebrow">Construyamos algo mejor</p>
+          <h2 id="contact-title">Conversemos sobre tu equipo</h2>
+          <p>Cuéntame qué necesita tu organización. Será un gusto explorar contigo cómo fortalecer el desarrollo y bienestar de las personas.</p>
+          <div class="contact-details">
+            <a class="location-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cali%2C+Valle+del+Cauca%2C+Colombia" target="_blank" rel="noopener noreferrer">📍 Cali, Valle del Cauca, Colombia</a>
+            <a class="button" href="https://wa.me/573235849488?text=Hola%2C%20Tatiana.%20Quisiera%20conocer%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="Escribir a Tatiana por WhatsApp al +57 323 584 9488">Escríbeme por WhatsApp</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@empresa.com" required>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntame brevemente cómo puedo ayudarte" required></textarea>
+          </div>
+          <button class="button" type="submit">Enviar mensaje</button>
+          <p class="form-note">El mensaje se enviará por WhatsApp. No se almacena información en este sitio.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página con derechos reservados y enlaces a redes sociales. -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Tatiana Delgado. Todos los derechos reservados.</p>
+      <nav class="social-links" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/in/tatiana-delgado-605836446/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        
+      </nav>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      const message = [
+        `Hola, Tatiana. Mi nombre es ${formData.get("nombre")}.`,
+        `Mi correo es ${formData.get("correo")}.`,
+        "",
+        formData.get("mensaje")
+      ].join("\n");
+      const whatsappUrl = new URL("https://wa.me/573235849488");
+      whatsappUrl.searchParams.set("text", message);
+
+      window.location.href = whatsappUrl.toString();
+    });
+  </script>
+</body>
+</html>
